@@ -13,7 +13,7 @@ import com.lukaspili.mortardemo.ui.screen.PostsScreen;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
@@ -23,10 +23,10 @@ public class PostsView extends LinearLayout {
     @Inject
     protected PostsScreen.Presenter presenter;
 
-    @InjectView(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     public RecyclerView recyclerView;
 
-    @InjectView(R.id.progress)
+    @BindView(R.id.progress)
     public ProgressBar progressBar;
 
     public PostsView(Context context, AttributeSet attrs) {
@@ -54,6 +54,6 @@ public class PostsView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 }

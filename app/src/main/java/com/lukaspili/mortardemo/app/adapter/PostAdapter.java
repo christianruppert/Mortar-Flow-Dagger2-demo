@@ -12,8 +12,9 @@ import com.lukaspili.mortardemo.model.Post;
 
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
@@ -46,7 +47,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        @InjectView(R.id.text)
+        @BindView(R.id.text)
         public TextView textView;
 
         private Listener listener;
@@ -55,7 +56,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             super(view);
             this.listener = listener;
 
-            ButterKnife.inject(this, view);
+            ButterKnife.bind(this, view);
             view.setOnClickListener(this);
         }
 

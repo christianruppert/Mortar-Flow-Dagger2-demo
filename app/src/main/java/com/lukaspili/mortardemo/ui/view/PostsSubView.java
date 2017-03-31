@@ -68,7 +68,7 @@ public class PostsSubView extends FrameLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @OnClick

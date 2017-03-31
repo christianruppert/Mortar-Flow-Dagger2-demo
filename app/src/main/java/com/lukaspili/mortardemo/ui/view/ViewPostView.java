@@ -12,7 +12,7 @@ import com.lukaspili.mortardemo.ui.screen.ViewPostScreen;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
@@ -22,10 +22,10 @@ public class ViewPostView extends LinearLayout {
     @Inject
     protected ViewPostScreen.Presenter presenter;
 
-    @InjectView(R.id.title)
+    @BindView(R.id.title)
     public TextView titleTextView;
 
-    @InjectView(R.id.content)
+    @BindView(R.id.content)
     public TextView contentTextView;
 
     public ViewPostView(Context context, AttributeSet attrs) {
@@ -48,6 +48,6 @@ public class ViewPostView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 }

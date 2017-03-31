@@ -16,7 +16,7 @@ import com.lukaspili.mortardemo.flow.HandlesBack;
 import com.lukaspili.mortardemo.ui.screen.PostsScreen;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 import flow.Flow;
 import flow.FlowDelegate;
 import flow.History;
@@ -34,7 +34,7 @@ public class RootActivity extends Activity implements Flow.Dispatcher {
 
     FlowDelegate flowDelegate;
 
-    @InjectView(R.id.container)
+    @BindView(R.id.container)
     PathContainerView pathContainerView;
 
     @Override
@@ -79,7 +79,7 @@ public class RootActivity extends Activity implements Flow.Dispatcher {
         BundleServiceRunner.getBundleServiceRunner(this).onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_root);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         GsonParceler parceler = new GsonParceler(new Gson());
         @SuppressWarnings("deprecation") FlowDelegate.NonConfigurationInstance nonConfig =

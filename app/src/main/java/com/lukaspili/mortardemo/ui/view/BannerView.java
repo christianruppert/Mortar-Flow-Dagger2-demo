@@ -31,7 +31,7 @@ public class BannerView extends LinearLayout {
         component.inject(this);
 
         View view = View.inflate(context, R.layout.view_banner, this);
-        ButterKnife.inject(view);
+        ButterKnife.bind(view);
     }
 
     @OnClick(R.id.text)

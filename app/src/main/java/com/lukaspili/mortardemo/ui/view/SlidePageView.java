@@ -12,7 +12,7 @@ import com.lukaspili.mortardemo.ui.screen.SlidePageScreen;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
@@ -22,7 +22,7 @@ public class SlidePageView extends LinearLayout {
     @Inject
     protected SlidePageScreen.Presenter presenter;
 
-    @InjectView(R.id.page_title)
+    @BindView(R.id.page_title)
     public TextView textView;
 
     public SlidePageView(Context context, AttributeSet attrs) {
@@ -45,6 +45,6 @@ public class SlidePageView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 }
